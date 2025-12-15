@@ -3,10 +3,14 @@
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  --blue-aside: #1992d4;
 }
 img {
   display: block;
   max-width: 100%;
+}
+button {
+  border: none;
 }
 body {
   display: grid;
@@ -18,8 +22,22 @@ header {
   grid-row: 1 / 2;
 }
 aside {
-  background-color: rgb(55, 133, 250);
+  background-color: var(--blue-aside);
   color: whitesmoke;
   grid-column: 1 /2;
   grid-row: 1 / 3;
+  display: grid;
+}
+
+aside button {
+  background-color: var(--blue-aside);
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+.main-nav {
+  display: grid;
+}
+.user-config-wrapper {
+  border-top: 1px solid red;
+  display: grid;
 }
