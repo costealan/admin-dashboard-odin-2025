@@ -14,12 +14,17 @@ button {
 }
 body {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 2fr;
 }
 header {
   grid-column: 2 /3;
   grid-row: 1 / 2;
+}
+.header-icons {
+  width: 24px;
+  fill: currentColor;
+  color: gray;
 }
 aside {
   background-color: var(--blue-aside);
@@ -27,17 +32,55 @@ aside {
   grid-column: 1 /2;
   grid-row: 1 / 3;
   display: grid;
+  grid-template-rows: 1fr 3fr 2fr 5fr;
+}
+.logo-title-container {
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  justify-content: center;
+}
+.logo-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.dashboard-logo {
+  fill: currentColor;
+  width: 3rem;
+  height: 3rem;
 }
 
-aside button {
+.nav-element {
   background-color: var(--blue-aside);
   color: whitesmoke;
   font-size: 1.5rem;
+  height: 50px;
+  padding: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.nav-element:hover {
+  cursor: pointer;
+  background-color: #006094;
+}
+.nav-element p {
+  text-align: start;
+}
+.icon-container {
+  grid-column: 1 / 2;
+  display: grid;
+  justify-content: center;
+  width: 100%;
+}
+.nav-icon {
+  width: 1.5rem;
+  height: 2rem;
+  fill: currentColor;
 }
 .main-nav {
-  display: grid;
 }
 .user-config-wrapper {
-  border-top: 1px solid red;
-  display: grid;
+  padding-top: 60px;
 }
