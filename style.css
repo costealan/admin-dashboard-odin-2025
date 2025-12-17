@@ -117,6 +117,9 @@ input[type="search"] {
 aside {
   background-color: var(--blue-aside);
   color: whitesmoke;
+  padding-right: 90px;
+  padding-left: 20px;
+  padding-top: 20px;
   grid-column: 1 /2;
   grid-row: 1 / 3;
   display: grid;
@@ -125,21 +128,25 @@ aside {
 .logo-title-container {
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 40px 140px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
 }
-.logo-container {
-  padding-left: 20px;
-  padding-right: 20px;
-}
+
 .dashboard-logo {
+  height: 50px;
+  width: 50px;
   fill: currentColor;
-  width: 3rem;
-  height: 3rem;
 }
 .main-nav {
   grid-row: 2/3;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  grid-template-columns: 40px 140px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 .nav-element {
   background-color: var(--blue-aside);
@@ -150,6 +157,10 @@ aside {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
+  grid-template-columns: 40px 140px;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 .nav-element:hover {
   cursor: pointer;
