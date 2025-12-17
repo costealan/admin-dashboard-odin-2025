@@ -4,6 +4,7 @@
   padding: 0;
   line-height: 1.5;
   --blue-aside: #1992d4;
+  --clear-card: #ffffff;
 }
 img {
   display: block;
@@ -174,26 +175,31 @@ aside {
 }
 
 main {
-  background-color: #dae5f7;
-  padding: 20px;
+  background-color: #e1e8f0;
+  padding: 40px 35px 66px 20px;
   gap: 20px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: minmax(780px, 1fr) minmax(280px, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
 .articles-section {
   grid-row: 1 / 3;
-  background-color: white;
+}
+.articles-section h2 {
+  padding-bottom: 13px;
+  font-weight: 500;
 }
 .articles-wrapper {
+  padding-bottom: 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 380px));
+  grid-template-rows: repeat(3, 220px);
   gap: 20px;
 }
 .articles-wrapper article {
-  background-color: whitesmoke;
-  border-left: 5px solid orange;
+  position: relative;
+  background-color: var(--clear-card);
+  border-left: 10px solid #f0b428;
   border-radius: 10px;
   padding-left: 30px;
   padding-top: 40px;
@@ -204,26 +210,71 @@ main {
   width: 24px;
   height: 24px;
   border: none;
-  background-color: whitesmoke;
+  background-color: var(--clear-card);
+}
+.share-save-container {
+  position: absolute;
+  right: 30px;
+  bottom: 40px;
+  width: 130px;
+  height: 15px;
+  display: grid;
+  justify-content: end;
+  align-items: end;
+  grid-template-columns: repeat(3, 1fr);
 }
 .share-save-container button {
   border: none;
-  background-color: whitesmoke;
+  background-color: var(--clear-card);
+  color: #6d6d6d;
+}
+.annoucements-container h2 {
+  padding-bottom: 13px;
 }
 .announcement-card-container {
-  background-color: whitesmoke;
-  padding: 40px;
+  background-color: var(--clear-card);
+  padding: 40px 28px 30px 25px;
   border-radius: 20px;
+}
+.announcement-card-container article {
+  padding: 8px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.announcement-card-container article h6 {
+  font-size: 1rem;
+}
+.announcement-card-container article p {
+  font-size: 0.8rem;
+  color: #959595;
 }
 .trending {
   grid-column: 2 / 3;
-  background-color: whitesmoke;
+}
+.trending h2 {
+  padding-bottom: 13px;
+}
+.trending-container {
+  background-color: var(--clear-card);
   border-radius: 10px;
-  padding-left: 30px;
-  padding-top: 40px;
-  padding-right: 20px;
+
+  padding: 30px 60px 30px 25px;
+  height: 325px;
+  display: grid;
+  gap: 20px;
 }
 .trending-card {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+}
+.trending-text-container {
+  grid-column: 2 / 3;
+  font-size: 1rem;
+  display: grid;
+  grid-template-rows: repeat(2, 19px);
+}
+
+.trending-text-container span {
+  color: #cdcdcd;
+  font-weight: lighter;
 }
